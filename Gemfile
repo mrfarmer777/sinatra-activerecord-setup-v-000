@@ -9,13 +9,13 @@ gem 'sinatra-activerecord' #allows use or Rake tasks for setup (I assume schema 
 gem 'rake' #makes rake a thing
 
 
-group :development do
+group :development do  #only installed when we're doing the development environment, a production doesn't nee them
 	gem 'shotgun'
 	gem 'pry'
-	gem 'tux'
-	gem 'sqlite3'
+	gem 'tux' #interactive console that pre-loads our database
+	gem 'sqlite3' #database tools
 end
-    
+
 group :test do
   gem 'rspec'
   gem 'capybara'
